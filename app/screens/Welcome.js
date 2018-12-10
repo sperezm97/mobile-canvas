@@ -47,7 +47,7 @@ class Welcome extends Component {
         super(props);
 
         this.state = { 
-            isLoading: true 
+            isLoading: false 
 		};
 		
 		// Deactivates yellow warning box.
@@ -55,7 +55,7 @@ class Welcome extends Component {
     }
 
     componentWillMount() {
-        this.handleSessionData();
+        //this.handleSessionData();
 	}
 	
 	// Verifies if there's any session data on the local storage.

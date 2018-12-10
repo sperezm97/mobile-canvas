@@ -31,13 +31,27 @@ export default class App extends Component {
 	startApp(root) {
 		switch (root) {
 			case 'welcome':
-				Navigation.startSingleScreenApp({
-					screen: {
-						screen: 'dac.Welcome', // unique ID registered with Navigation.registerScreen
-						navigatorStyle: {
-							navBarHidden: true,
-						},
-					},
+				// Navigation.startSingleScreenApp({
+				// 	screen: {
+				// 		screen: 'dac.Welcome', // unique ID registered with Navigation.registerScreen
+				// 		navigatorStyle: {
+				// 			navBarHidden: true,
+				// 		},
+				// 	},
+				// });
+				Navigation.setRoot({
+					root: {
+						stack: {
+							children: [{
+								component: {
+									name: 'dac.Welcome',
+									navigatorStyle: {
+										navBarHidden: true,
+									}
+								}
+							}]
+						}
+					}
 				});
 				break;
 			case 'login':
